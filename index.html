@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Визуализация Растеризованных Алгоритмов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theory-link">
+        <a href="theory.html" target="_blank">Теория алгоритмов</a>
+    </div>
+    <h1>Визуализация Растеризованных Алгоритмов</h1>
+    <div class="container">
+        <div class="controls">
+            <div class="input-section">
+                <h2>Настройки Отрезка</h2>
+                <form id="line-form">
+                    <label>Точка A (x1, y1):
+                        <input type="number" id="x1" value="0" required>
+                        <input type="number" id="y1" value="5" required>
+                    </label>
+                    <label>Точка B (x2, y2):
+                        <input type="number" id="x2" value="10" required>
+                        <input type="number" id="y2" value="10" required>
+                    </label>
+                </form>
+            </div>
+            <div class="input-section">
+                <h2>Настройки Окружности</h2>
+                <form id="circle-form">
+                    <label>Центр (xc, yc):
+                        <input type="number" id="xc" value="0" required>
+                        <input type="number" id="yc" value="0" required>
+                    </label>
+                    <label>Радиус (r):
+                        <input type="number" id="r" value="5" required>
+                    </label>
+                </form>
+            </div>
+            <div class="input-section">
+                <h2>Масштабирование</h2>
+                <label for="scale-slider">Масштаб: <span id="scale-value">100%</span></label>
+                <input type="range" id="scale-slider" min="50" max="250" value="100">
+            </div>
+            <div class="buttons">
+                <h2>Алгоритмы Отрезков</h2>
+                <button id="dda">Алгоритм ЦДА</button>
+                <button id="generate-step-line">Генерация StepLine</button>
+                <button id="bresenham-line">Алгоритм Брезенхема (Отрезки)</button>
+                <h2>Алгоритмы Окружностей</h2>
+                <button id="bresenham-circle">Алгоритм Брезенхема (Окружности)</button>
+                <button id="reset-canvas">Сбросить Canvas</button>
+            </div>
+            <div class="info">
+                <h2>Информация</h2>
+                <p id="algorithm-info">Выберите алгоритм для отображения информации.</p>
+                <p id="execution-time">Время выполнения: N/A</p>
+            </div>
+        </div>
+        <div class="visualization">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+    </div>
+    <div class="steps-container">
+        <h2>Шаги Алгоритмов</h2>
+        <pre id="steps">Выберите алгоритм и выполните его, чтобы увидеть шаги решения.</pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
